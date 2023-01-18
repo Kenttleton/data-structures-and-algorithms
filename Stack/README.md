@@ -2,11 +2,11 @@
 
 A stack is a linear data structure that follows a particular order in which the operations are performed.
 
-To implement the stack, it is required to maintain the pointer to the top of the stack, which is the last element to be inserted because we can access the elements only on the top of the stack.
+To implement the stack, it is required to maintain the pointer to the top of the stack, which is the last item to be inserted because we can access the items only on the top of the stack.
 
 __LIFO( Last In First Out )/FILO( First In Last Out):__
 
-This strategy states that the element that is inserted last will come out first and the first element inserted will come out last. You can take a deck of cards sitting on a table as a real-life example. The card which we put last is on the top and since we remove the card that is at the top, we can say that the card that was put last comes out first.
+This strategy states that the item that is inserted last will come out first and the first item inserted will come out last. You can take a deck of cards sitting on a table as a real-life example. The card which we put last is on the top and since we remove the card that is at the top, we can say that the card that was put last comes out first.
 
 ## Basic Operations on Stack
 
@@ -20,7 +20,7 @@ In order to make manipulations in a stack, there are certain operations provided
 
 ### Push
 
-Adds an item to the stack. If the stack is full, then it is said to be an Overflow condition. Normally in Javascript/Typescript we do not have to worry about stack limits but there is a physical limit of 4,294,967,295 (32 bit index limit) elements in practice. Most cases will not see this limit but to save on space limits should be considered.
+Adds an item to the stack. If the stack is full, then it is said to be an Overflow condition. Normally in Javascript/Typescript we do not have to worry about stack limits but there is a physical limit of 4,294,967,295 (32 bit index limit) items in practice. Most cases will not see this limit but to save on space limits should be considered.
 
 Algorithm for push:
 
@@ -97,7 +97,7 @@ __Complexity Analysis:__
 
 ### Types of Stacks
 
-__Register Stack:__ This type of stack is also a memory element present in the memory unit and can handle a small amount of data only. The height of the register stack is always limited as the size of the register stack is very small compared to the memory.
+__Register Stack:__ This type of stack is also a memory item present in the memory unit and can handle a small amount of data only. The height of the register stack is always limited as the size of the register stack is very small compared to the memory.
 
 __Memory Stack:__ This type of stack can handle a large amount of memory data. The height of the memory stack is flexible as it occupies a large amount of memory data.
 
@@ -110,7 +110,7 @@ __Memory Stack:__ This type of stack can handle a large amount of memory data. T
 - Backtracking is one of the algorithm designing techniques. Some examples of backtracking are the Knight-Tour problem, N-Queen problem, find your way through a maze, and game-like chess or checkers in all these problems we dive into some way if that way is not efficient we come back to the previous state and go into another path. To get back from a current state we need to store the previous state for that purpose we need a stack.
 - In Graph Algorithms like Topological Sorting and Strongly Connected Components
 - In Memory management, any modern computer uses a stack as the primary management for a running purpose. Each program that is running in a computer system has its own memory allocations
-- String reversal is also another application of stack. Here one by one each character gets inserted into the stack. So the first character of the string is on the bottom of the stack and the last element of a string is on the top of the stack. After Performing the pop operations on the stack we get a string in reverse order.
+- String reversal is also another application of stack. Here one by one each character gets inserted into the stack. So the first character of the string is on the bottom of the stack and the last character of a string is on the top of the stack. After Performing the pop operations on the stack we get a string in reverse order.
 - Stack also helps in implementing function calls in computers. The last called function is always completed first. Javascript uses a stack in the engine to run Javascript code.
 - Stacks are also used to implement the undo/redo operation in text editor.
 
@@ -120,3 +120,12 @@ There are two ways to implement a stack
 
 - Using array
 - Using linked list
+
+## Exercises
+
+1. Easy - Implement the Stack algorithms defined above (See ./Solution for solution in that language)
+2. Easy - Create a shuffle algorithm to create a new stack with a random order.
+3. Medium - Create an algorithm to deal (pop) cards from the stack given a number of cards to deal.
+4. Medium - Create an algorithm to deal cards, using the algorithm in #3, to a given number of players (stacks).
+5. Medium - Create an algorithm for resolving the highest value given a set of cards. For an extra challenge, include the trump flag into the algorithm.
+6. Hard - Create a trick taking game (Euchre, Spades, Hearts) using the algorithms above. For an extra challenge, implement betting mechanics.

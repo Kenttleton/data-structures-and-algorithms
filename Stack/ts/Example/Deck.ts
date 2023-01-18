@@ -1,67 +1,8 @@
-import { Card, Short, Long } from "./Card";
-import { Stack } from "./Stack";
-import { Symbol, Name } from "./Suit";
+import { Long, Short, Card } from "../Card";
+import { Name, Symbol } from "../Suit";
 
-export class Deck implements Stack<Card> {
-  [n: number]: Card;
-  length: number = 0;
-  index: number = -1;
-  max: number = 52;
-
-  size(): number {
-    return this.length;
-  }
-
-  isEmpty(): boolean {
-    return this.length === 0;
-  }
-
-  push(card: Card): number {
-    if (this.length === this.max) {
-      console.error("Stack Overflow");
-    } else {
-      this.index++;
-      this[this.index] = card;
-      this.length++;
-    }
-    return this.index;
-  }
-
-  pop(): Card | undefined {
-    if (this.length === 0) {
-      console.error("Stack Underflow");
-      return;
-    }
-    const card = this[this.index];
-    this.index--;
-    this.length--;
-    return card;
-  }
-
-  top(): Card | undefined {
-    if (this.length === 0) {
-      console.error("Stack Underflow");
-      return;
-    }
-    return this[this.index];
-  }
-
-  print() {
-    let str = "Bottom -> ";
-    for (let i = 0; i <= this.index; i++) {
-      str += `${this[i].name.long} of ${this[i].suit.name}`;
-      if (i === this.index) {
-        str += ` -> Top`;
-      } else {
-        str += ` -> `;
-      }
-    }
-    console.log(str);
-  }
-}
-
-export function getFullDeck(): Deck {
-  const deck = new Deck();
+export function getFullDeck(): Card[] {
+  const deck: Card[] = [];
   for (let i = 1; i <= 4; i++) {
     let suit = "CLUBS";
     switch (i) {
@@ -140,7 +81,7 @@ export function getFullDeck(): Deck {
   return deck;
 }
 
-const fullDeck = [
+export const fullDeck = [
   {
     value: 1,
     suit: {

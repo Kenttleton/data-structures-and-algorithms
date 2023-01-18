@@ -1,7 +1,7 @@
 export interface Stack<T> {
     [n: number]: T;
     length: number;
-    index: number;
+    pointer: number;
     max: number;
 
     isEmpty(): boolean;
