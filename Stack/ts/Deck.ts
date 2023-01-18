@@ -8,6 +8,10 @@ export class Deck implements Stack<Card> {
   index: number = -1;
   max: number = 52;
 
+  size(): number {
+    return this.length;
+  }
+
   isEmpty(): boolean {
     return this.length === 0;
   }
@@ -34,7 +38,7 @@ export class Deck implements Stack<Card> {
     return card;
   }
 
-  peek(): Card | undefined {
+  top(): Card | undefined {
     if (this.length === 0) {
       console.error("Stack Underflow");
       return;
@@ -135,3 +139,630 @@ export function getFullDeck(): Deck {
   }
   return deck;
 }
+
+const fullDeck = [
+  {
+    value: 1,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.ACE,
+      long: Long.ACE,
+    },
+  },
+  {
+    value: 2,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.TWO,
+      long: Long.TWO,
+    },
+  },
+  {
+    value: 3,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.THREE,
+      long: Long.THREE,
+    },
+  },
+  {
+    value: 4,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.FOUR,
+      long: Long.FOUR,
+    },
+  },
+  {
+    value: 5,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.FIVE,
+      long: Long.FIVE,
+    },
+  },
+  {
+    value: 6,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.SIX,
+      long: Long.SIX,
+    },
+  },
+  {
+    value: 7,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.SEVEN,
+      long: Long.SEVEN,
+    },
+  },
+  {
+    value: 8,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.EIGHT,
+      long: Long.EIGHT,
+    },
+  },
+  {
+    value: 9,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.NINE,
+      long: Long.NINE,
+    },
+  },
+  {
+    value: 10,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.TEN,
+      long: Long.TEN,
+    },
+  },
+  {
+    value: 11,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.JACK,
+      long: Long.JACK,
+    },
+  },
+  {
+    value: 12,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.QUEEN,
+      long: Long.QUEEN,
+    },
+  },
+  {
+    value: 13,
+    suit: {
+      name: Name.CLUBS,
+      symbol: Symbol.CLUBS,
+      trump: false,
+    },
+    name: {
+      short: Short.KING,
+      long: Long.KING,
+    },
+  },
+  {
+    value: 1,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.ACE,
+      long: Long.ACE,
+    },
+  },
+  {
+    value: 2,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.TWO,
+      long: Long.TWO,
+    },
+  },
+  {
+    value: 3,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.THREE,
+      long: Long.THREE,
+    },
+  },
+  {
+    value: 4,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.FOUR,
+      long: Long.FOUR,
+    },
+  },
+  {
+    value: 5,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.FIVE,
+      long: Long.FIVE,
+    },
+  },
+  {
+    value: 6,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.SIX,
+      long: Long.SIX,
+    },
+  },
+  {
+    value: 7,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.SEVEN,
+      long: Long.SEVEN,
+    },
+  },
+  {
+    value: 8,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.EIGHT,
+      long: Long.EIGHT,
+    },
+  },
+  {
+    value: 9,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.NINE,
+      long: Long.NINE,
+    },
+  },
+  {
+    value: 10,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.TEN,
+      long: Long.TEN,
+    },
+  },
+  {
+    value: 11,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.JACK,
+      long: Long.JACK,
+    },
+  },
+  {
+    value: 12,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.QUEEN,
+      long: Long.QUEEN,
+    },
+  },
+  {
+    value: 13,
+    suit: {
+      name: Name.SPADES,
+      symbol: Symbol.SPADES,
+      trump: false,
+    },
+    name: {
+      short: Short.KING,
+      long: Long.KING,
+    },
+  },
+  {
+    value: 1,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.ACE,
+      long: Long.ACE,
+    },
+  },
+  {
+    value: 2,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.TWO,
+      long: Long.TWO,
+    },
+  },
+  {
+    value: 3,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.THREE,
+      long: Long.THREE,
+    },
+  },
+  {
+    value: 4,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.FOUR,
+      long: Long.FOUR,
+    },
+  },
+  {
+    value: 5,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.FIVE,
+      long: Long.FIVE,
+    },
+  },
+  {
+    value: 6,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.SIX,
+      long: Long.SIX,
+    },
+  },
+  {
+    value: 7,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.SEVEN,
+      long: Long.SEVEN,
+    },
+  },
+  {
+    value: 8,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.EIGHT,
+      long: Long.EIGHT,
+    },
+  },
+  {
+    value: 9,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.NINE,
+      long: Long.NINE,
+    },
+  },
+  {
+    value: 10,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.TEN,
+      long: Long.TEN,
+    },
+  },
+  {
+    value: 11,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.JACK,
+      long: Long.JACK,
+    },
+  },
+  {
+    value: 12,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.QUEEN,
+      long: Long.QUEEN,
+    },
+  },
+  {
+    value: 13,
+    suit: {
+      name: Name.HEARTS,
+      symbol: Symbol.HEARTS,
+      trump: false,
+    },
+    name: {
+      short: Short.KING,
+      long: Long.KING,
+    },
+  },
+  {
+    value: 1,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.ACE,
+      long: Long.ACE,
+    },
+  },
+  {
+    value: 2,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.TWO,
+      long: Long.TWO,
+    },
+  },
+  {
+    value: 3,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.THREE,
+      long: Long.THREE,
+    },
+  },
+  {
+    value: 4,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.FOUR,
+      long: Long.FOUR,
+    },
+  },
+  {
+    value: 5,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.FIVE,
+      long: Long.FIVE,
+    },
+  },
+  {
+    value: 6,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.SIX,
+      long: Long.SIX,
+    },
+  },
+  {
+    value: 7,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.SEVEN,
+      long: Long.SEVEN,
+    },
+  },
+  {
+    value: 8,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.EIGHT,
+      long: Long.EIGHT,
+    },
+  },
+  {
+    value: 9,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.NINE,
+      long: Long.NINE,
+    },
+  },
+  {
+    value: 10,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.TEN,
+      long: Long.TEN,
+    },
+  },
+  {
+    value: 11,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.JACK,
+      long: Long.JACK,
+    },
+  },
+  {
+    value: 12,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.QUEEN,
+      long: Long.QUEEN,
+    },
+  },
+  {
+    value: 13,
+    suit: {
+      name: Name.DIAMONDS,
+      symbol: Symbol.DIAMONDS,
+      trump: false,
+    },
+    name: {
+      short: Short.KING,
+      long: Long.KING,
+    },
+  },
+];
