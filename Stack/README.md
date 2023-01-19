@@ -125,7 +125,10 @@ There are two ways to implement a stack
 
 1. Easy - Implement the Stack algorithms defined above (See ./Solution for solution in that language)
 2. Easy - Create a shuffle algorithm to create a new stack with a random order.
-3. Medium - Create an algorithm to deal (pop) cards from the stack given a number of cards to deal.
-4. Medium - Create an algorithm to deal cards, using the algorithm in #3, to a given number of players (stacks).
-5. Medium - Create an algorithm for resolving the highest value given a set of cards. For an extra challenge, include the trump flag into the algorithm.
+3. Medium - Create an algorithm to deal (pop) cards from the stack given a number of cards to deal into a set (stack or array, your choice).
+4. Medium - Create an algorithm to deal cards, using the algorithm in #3, to a given number of players (stacks or arrays, your choice).
+5. Medium - Create an algorithm for resolving the highest value given a set of cards (stack or array, your choice). For an extra challenge, include the trump flag into the algorithm.
 6. Hard - Create a trick taking game (Euchre, Spades, Hearts) using the algorithms above. For an extra challenge, implement betting mechanics.
+
+## Credits
+1. [Introduction to Stack - Data Structure and Algorithm Tutorials - GeeksforGeeks](https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/)

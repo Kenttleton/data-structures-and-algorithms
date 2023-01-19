@@ -9,5 +9,5 @@ export interface Stack<T> {
     pop(): T | undefined;
     top(): T | undefined;
     size(): number;
-    print();
+    print(): void | string;
 }

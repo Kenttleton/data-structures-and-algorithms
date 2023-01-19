@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "allowJs": false,
+    "checkJs": false,
+    "sourceMap": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "declaration": false,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "target": "es6",
+    "jsx": "react",
+    "baseUrl": ".",
+    "outDir": "dist",
+    "module": "commonjs",
+    "types": ["jest", "node"],
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "lib": ["ES6", "dom"]
+  },
+  "typeAcquisition": { "include": ["jest"] },
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

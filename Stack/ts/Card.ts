@@ -1,12 +1,12 @@
 import { Suit } from "./Suit";
 
-export class Card {
+export interface Card {
     value: number;
     suit: Suit;
     name: Name;
 }
 
-export class Name {
+export interface Name {
     short: Short;
     long: Long;
 } 

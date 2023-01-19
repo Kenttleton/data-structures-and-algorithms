@@ -1,4 +1,4 @@
-export class Suit {
+export interface Suit {
     name: Name;
     symbol: Symbol;
     trump: boolean;
