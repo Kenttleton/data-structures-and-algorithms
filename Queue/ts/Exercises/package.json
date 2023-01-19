@@ -1,0 +1,82 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "description": "Data Structures and Algorithms Series - Stack",
+  "main": "dist/Exercises/index.js",
+  "scripts": {
+    "clean": "tsc --build --clean",
+    "build": "tsc --resolveJsonModule",
+    "start": "node .",
+    "build:start": "npm run build && npm run start",
+    "pretty": "prettier --check \"*.{ts,tsx,css}\"",
+    "pretty:fix": "prettier --write \"*.{ts,tsx,css}\"",
+    "lint": "eslint \"*.{ts,tsx}\"",
+    "lint:fix": "eslint \"*.{ts,tsx}\" --fix",
+    "test": "jest --watchAll=false"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^7.13.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^26.6.0",
+    "eslint-plugin-jsdoc": "^30.7.8",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-prefer-arrow": "^1.2.2",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-unicorn": "^23.0.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.0.1",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^8.4.1",
+    "typescript": "^4.3.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "coverageReporters": [
+      "cobertura",
+      "lcov",
+      "text",
+      "clover"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0 <17"
+  },
+  "author": "H2IC, Kent Utterback",
+  "license": "ISC"
+}

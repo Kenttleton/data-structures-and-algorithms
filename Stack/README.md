@@ -55,11 +55,11 @@ end else
 end procedure
 ```
 
-### Top
+### Peek
 
 Returns the top item of the stack without removing the item from the stack.
 
-Algorithm for Top:
+Algorithm for Peek:
 
 ```
 begin 

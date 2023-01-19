@@ -17,10 +17,7 @@ export class Deck implements Stack<Card> {
     pop(): Card | undefined {
         throw new Error(`Method not implemented.`);
     }
-    top(): Card | undefined {
-        throw new Error(`Method not implemented.`);
-    }
-    size(): number {
+    peek(): Card | undefined {
         throw new Error(`Method not implemented.`);
     }
     print() {

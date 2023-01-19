@@ -7,7 +7,6 @@ export interface Stack<T> {
     isEmpty(): boolean;
     push(value: T): number;
     pop(): T | undefined;
-    top(): T | undefined;
-    size(): number;
+    peek(): T | undefined;
     print(): void | string;
 }

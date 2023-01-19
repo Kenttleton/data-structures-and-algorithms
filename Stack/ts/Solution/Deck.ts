@@ -7,10 +7,6 @@ export class Deck implements Stack<Card> {
   pointer: number = -1;
   max: number = 52;
 
-  size(): number {
-    return this.length;
-  }
-
   isEmpty(): boolean {
     return this.length === 0;
   }
@@ -37,7 +33,7 @@ export class Deck implements Stack<Card> {
     return card;
   }
 
-  top(): Card | undefined {
+  peek(): Card | undefined {
     if (this.length === 0) {
       console.error("Stack Underflow");
       return;
