@@ -6,7 +6,7 @@ export class UnitQueue<Unit> implements Queue<Unit> {
     length: number = 0;
     frontPointer: number = 0;
     rearPointer: number = 0;
-    max: number = 5;
+    max: number = 5; // Arbitrary limit on the Queue
     isEmpty(): boolean {
         return this.length === 0;
     }
